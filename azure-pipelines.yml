@@ -13,12 +13,13 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    arguments: '-c Release'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '-o $(Build.ArtifactStagingDirectory)'
+    arguments: '-o $(Build.ArtifactStagingDirectory) -c Release --no-build'
 
 - task: PublishBuildArtifacts@1
   inputs:
