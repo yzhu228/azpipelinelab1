@@ -2,3 +2,5 @@
 	path = builds/armtemplates
 	url = https://github.com/yzhu228/armtemplates.git
 	branch = azpipelinelab1
+[submodule ".\\builds\\armtemplates\\"]
+	branch = azpipelinelab1
